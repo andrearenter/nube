@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo or "Resultados" }}</title>
+</head>
+<body>
+    <h1>{{ titulo or "Resultados de la Votación" }}</h1>
+    <ul>
+        {% for r in resultados %}
+            <li>{{ r['_id'] }} - {{ r['votos'] }} votos</li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Volver</button></a>
+</body>
+</html>

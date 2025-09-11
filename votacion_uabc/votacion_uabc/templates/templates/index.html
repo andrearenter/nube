@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Votaciones UABC</title>
+</head>
+<body>
+    <h1>🗳️ Votar por Candidato</h1>
+    <form action="/votar" method="post">
+        Matrícula: <input type="text" name="matricula" required><br>
+        Correo UABC: <input type="email" name="correo" required><br>
+        Candidato:
+        <select name="voto" required>
+            <option value="Candidato 1">Candidato 1</option>
+            <option value="Candidato 2">Candidato 2</option>
+            <option value="Candidato 3">Candidato 3</option>
+        </select><br>
+        <button type="submit">Votar</button>
+    </form>
+
+    <h1>👨‍🏫 Votar por Maestro Favorito</h1>
+    <form action="/votar_maestro" method="post">
+        Correo UABC: <input type="email" name="correo" required><br>
+        Maestro Favorito:
+        <select name="maestro" required>
+            <option value="Sergio Razo">Sergio Razo</option>
+            <option value="Javier Padilla">Javier Padilla</option>
+            <option value="Carlos Gallegos">Carlos Gallegos</option>
+        </select><br>
+        <button type="submit">Votar por Maestro</button>
+    </form>
+
+    <br><hr>
+    <h2>📊 Ver Resultados</h2>
+    <a href="/resultados"><button>Resultados de Candidatos</button></a>
+    <a href="/resultados_maestro"><button>Resultados de Maestros</button></a>
+</body>
+</html>
